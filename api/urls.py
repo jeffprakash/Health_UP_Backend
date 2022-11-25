@@ -11,3 +11,4 @@ urlpatterns = [
     path("get-details/",views.get_details,name="get-details"),
     path("form/",views.form,name="form"),
 ]
+ 

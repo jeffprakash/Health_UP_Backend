@@ -39,8 +39,8 @@ def signup(request):
 
 @api_view(['GET'])
 def get_user_by_num(request,pk):                              #api to get patient list by id
-    num=Profile.objects.all()
-    serializer =dataSerializer(num, many=True)
+    num=Profile.objects.get(id=pk)
+    serializer =dataSerializer(num, many=False)
     return Response(serializer.data)
 
 
